@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const dataRoutes = require('./routes/data/');
+const PopulationRoutes = require('./routes/population/');
+const EmissionsRoutes = require('./routes/emissions/');
 
 const app = express();
 
@@ -16,4 +17,5 @@ app.get('/', (req, res) => {
   res.send('Index route');
 });
 
-dataRoutes(app);
+PopulationRoutes(app);
+EmissionsRoutes(app);
