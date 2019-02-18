@@ -16,7 +16,6 @@ const Send = (req, res) => {
   const json = JSON.parse(xml2json(xml, options));
   res.setHeader('Content-Type', 'application/json');
   res.send(json);
-  console.log(typeof json);
 };
 
 module.exports = { Send };
