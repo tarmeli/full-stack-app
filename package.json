@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"cd app && yarn start\" \"cd server && yarn start\"",
+    "dev": "concurrently \"cd app && npm start\" \"cd server && npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tommi Tarkki",
