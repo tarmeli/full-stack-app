@@ -6,15 +6,14 @@ const Loading = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setStage(stage >= 3 ? 0 : stage + 1);
-    }, 200);
+    }, 300);
 
     return () => clearInterval(interval);
   });
 
   return (
     <>
-      Loading
-      {new Array(stage).fill().map(() => '.').join('')}
+      {`Loading${new Array(stage).fill().map(() => '.').join('')}`}
     </>
   );
 };
