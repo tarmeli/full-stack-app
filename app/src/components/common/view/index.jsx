@@ -4,12 +4,12 @@ import List from '../list';
 
 import Loading from '../loading';
 
-const View = ({ dataToFetch }) => {
+const View = ({ dataToView }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/${dataToFetch}`)
+    fetch(`http://localhost:5000/${dataToView}`)
       .then(response => response.json())
       .then(setData)
       .then(() => {
@@ -26,7 +26,7 @@ const View = ({ dataToFetch }) => {
 };
 
 View.propTypes = {
-  dataToFetch: PropTypes.string.isRequired,
+  dataToView: PropTypes.string.isRequired,
 };
 
 export default View;

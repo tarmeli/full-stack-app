@@ -4,8 +4,8 @@ import View from './components/common/view';
 function App() {
   return (
     <div className="App" style={{ display: 'flex' }}>
-      <View dataToFetch="emissions" />
-      <View dataToFetch="population" />
+      <View dataToView="emissions" />
+      <View dataToView="population" />
     </div>
   );
 }
