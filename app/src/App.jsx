@@ -1,12 +1,11 @@
 import React from 'react';
-import Emissions from './components/emissions';
-import Population from './components/population';
+import View from './components/common/view';
 
 function App() {
   return (
     <div className="App" style={{ display: 'flex' }}>
-      <Emissions />
-      <Population />
+      <View dataToFetch="emissions" />
+      <View dataToFetch="population" />
     </div>
   );
 }
