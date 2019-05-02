@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function () {
+const Loading = () => {
   const [stage, setStage] = useState(0);
 
   useEffect(() => {
@@ -17,4 +17,6 @@ export default function () {
       {new Array(stage).fill().map(() => '.').join('')}
     </>
   );
-}
+};
+
+export default Loading;
