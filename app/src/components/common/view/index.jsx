@@ -7,6 +7,7 @@ import Loading from '../loading';
 const View = ({ dataToView }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState({});
 
   useEffect(() => {
     fetch(`http://localhost:5000/${dataToView}`)
@@ -14,6 +15,10 @@ const View = ({ dataToView }) => {
       .then(setData)
       .then(() => {
         setLoading(false);
+      })
+      .catch((err) => {
+        setError(err);
+        console.error('Fetch failed', error);
       });
   }, []);
 
